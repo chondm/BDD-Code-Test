@@ -1,0 +1,8 @@
+log/*
+tmp/*
+tmp/**/*
+.DS_Store
+vendor/gems/**/ext/*
+*.bundle
+*.swp
+rerun.txt
