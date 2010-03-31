@@ -1,5 +1,5 @@
 Given /^there is feature titled "([^\"]*)"$/ do |title|
-  feature = Factory(:feature)
+  @feature = Factory(:feature)  
 end
 
 Given /^the feature has "([^\"]*)" of "([^\"]*)"$/ do |attribute, value|

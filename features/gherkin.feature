@@ -10,7 +10,7 @@ Feature: Create, show, and list feature files
 
   Scenario: Create a new feature
     When I go to "the new feature page"
-    And I fill in "feature-title" with "Some terse yet descriptive text of what is desired"
+    And I fill in "title" with "Some terse yet descriptive text of what is desired"
     And I fill in "scenario-title" with "Some determinable business situation"
     And I fill in "given-block" with "Given some precondition"
     And I fill in "when-block" with "When some action by the actor"
@@ -18,7 +18,7 @@ Feature: Create, show, and list feature files
     And I press "submit"
     Then I should be on the "list features page"
     And I should see "Some terse yet descriptive text of what is desired"
-
+  @focus
   Scenario: Add a new scenario to a existing feature
     Given there is feature titled "Some terse yet descriptive text of what is desired"
     When I go to "the list features page"

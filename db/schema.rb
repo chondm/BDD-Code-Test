@@ -9,10 +9,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100321045705) do
+ActiveRecord::Schema.define(:version => 20100331053049) do
 
   create_table "features", :force => true do |t|
     t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "scenarios", :force => true do |t|
+    t.string   "title"
+    t.string   "given_block"
+    t.string   "when_block"
+    t.string   "then_block"
+    t.integer  "feature_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

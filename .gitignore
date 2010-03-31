@@ -6,3 +6,4 @@ vendor/gems/**/ext/*
 *.bundle
 *.swp
 rerun.txt
+coverage/*

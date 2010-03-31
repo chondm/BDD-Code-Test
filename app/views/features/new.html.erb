@@ -1,0 +1,33 @@
+<h1> Create a new feature</h1>
+<% form_for(@feature) do |f| %>
+  <%= f.error_messages %>  
+   <p>
+    <%= f.label :title, "Title"  %><br />
+    <%= f.text_field :title%>
+  </p>
+  <% fields_for :scenario do |s| %>
+    <p>
+      <%= s.label :title, "Scenario-Title" %><br />
+      <%= s.text_field :title %>
+    </p>
+    <p>
+      <%= s.label :given_block, "Given-Block" %><br />
+      <%= s.text_field :given_block%>
+    </p>
+    <p>
+      <%= s.label :when_block, "When-Block" %><br />
+      <%= s.text_field :when_block%>
+    </p>
+    <p>
+      <%= s.label :then_block, "Then-Block" %><br />
+      <%= s.text_field :then_block%>
+    </p>
+  <% end %>
+  
+   <p>
+    <%= f.submit "submit" %>
+  </p>
+  
+  
+<% end %>
+<p><%=link_to "Back", features_path%></p
